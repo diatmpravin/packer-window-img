@@ -19,6 +19,7 @@
       "communicator": "winrm",
       "winrm_username": "Administrator",
       "vpc_id":"vpc-0e573b9c23b116db0",
+      "subnet_id":"subnet-00a6ea4acf6f1ecca",
       "winrm_password": "SuperS3cr3t!"
     }
   ],
