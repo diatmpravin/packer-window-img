@@ -3,7 +3,7 @@
     "aws_access_key": "{{env `AWS_ACCESS_KEY_ID`}}",
     "aws_secret_key": "{{env `AWS_SECRET_ACCESS_KEY`}}",
     "aws_session_token": "{{env `AWS_SESSION_TOKEN`}}",
-    "region":         "us-east-1"
+    "region":         "eu-west-1"
   },
   "builders": [
     {
@@ -13,15 +13,7 @@
       "token": "{{ user `aws_session_token` }}",
       "region": "{{ user `region` }}",
       "instance_type": "t2.micro",
-      "source_ami_filter": {
-        "filters": {
-          "virtualization-type": "hvm",
-          "name": "*Windows_Server-2012-R2*English-64Bit-Base*",
-          "root-device-type": "ebs"
-        },
-        "most_recent": true,
-        "owners": "amazon"
-      },
+      "source_ami": "ami-01776b82784323238",
       "ami_name": "packer-demo-{{timestamp}}",
       "user_data_file": "./bootstrap_win.txt",
       "communicator": "winrm",
