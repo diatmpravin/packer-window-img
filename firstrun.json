@@ -18,6 +18,7 @@
       "user_data_file": "./bootstrap_win.txt",
       "communicator": "winrm",
       "winrm_username": "Administrator",
+      "vpc_id":"vpc-0e573b9c23b116db0",
       "winrm_password": "SuperS3cr3t!"
     }
   ],
